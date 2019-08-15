@@ -6,7 +6,9 @@
 
 2. [Goals](#goals)
 
-3. f
+3. [Project draft](#project-draft)
+   
+4. More stuff..
 
 ## **Who am I?**
 
@@ -29,3 +31,12 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 - [ ] Create the draft of the webpage.
 - [ ] Choose the example dataset.
 - [ ] :soon:
+
+## **Project draft**
+
+
+
+
+## **The dream**
+
+
