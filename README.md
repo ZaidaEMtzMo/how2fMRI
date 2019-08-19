@@ -36,10 +36,45 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 ## **Project draft**
 
+<<<<<<< HEAD
 Introduction.
 
 
+=======
+The webpage will have an **Introduction** section where I will share links of websites that include a brief but deep explanation of each technique, their uses in neuroscience and the normal steps that every analysis require.
+Then, I will have a tab per technique/software and then, per step of the analysis:
+
+- Introduction
+
+- fMRI
+  - Data acquisition
+  - BIDS formatting
+  - Conversion to other formats
+  - FSL
+    - Preprocessing
+      1. Slice timing
+      2. Realignment
+      3. Coregistration
+      4. Normalisation
+      5. Smoothing
+    - Analysis
+      1. Task-based fMRI
+      2. Resting state fMRI
+  - SPM
+    - Preprocessing
+  - AFNI
+    - Preprocessing
+
+- MEG
+  - Data acquisition
+  - BIDS formatting
+  - Format styles
+  - Available software
+
+- EEG
+  - Data acquisition
+>>>>>>> 387e08973afdc3fb24b655c3bf92901482d8ccd9
 
 ## **The dream**
 
-
+Create an online hub with all the resources available for the analysis of fMRI. Per software, have a Jupyter notebook that allows the person to run their own analysis by themselves and to see their results at that same place. As some software require other software to be downloaded (SPM with MatLab), I will find a way to include them in a container where they could run the analysis without any trouble.
