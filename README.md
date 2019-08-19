@@ -8,7 +8,7 @@
 
 3. [Project draft](#project-draft)
    
-4. [The dream] (#the-dream)
+4. [The dream](#the-dream)
    
 ## **Who am I?**
 
@@ -34,8 +34,38 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 ## **Project draft**
 
-The webpage will have 
+The webpage will have an **Introduction** section where I will share links of websites that include a brief but deep explanation of each technique, their uses in neuroscience and the normal steps that every analysis require.
+Then, I will have a tab per technique/software and then, per step of the analysis:
 
+- Introduction
+
+- fMRI
+  - Data acquisition
+  - BIDS formatting
+  - Conversion to other formats
+  - FSL
+    - Preprocessing
+      1. Slice timing
+      2. Realignment
+      3. Coregistration
+      4. Normalisation
+      5. Smoothing
+    - Analysis
+      1. Task-based fMRI
+      2. Resting state fMRI
+  - SPM
+    - Preprocessing
+  - AFNI
+    - Preprocessing
+
+- MEG
+  - Data acquisition
+  - BIDS formatting
+  - Format styles
+  - Available software
+
+- EEG
+  - Data acquisition
 
 ## **The dream**
 
