@@ -8,8 +8,8 @@
 
 3. [Project draft](#project-draft)
    
-4. More stuff..
-
+4. [The dream] (#the-dream)
+   
 ## **Who am I?**
 
 Hello everyone! :smiley:
@@ -34,9 +34,9 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 ## **Project draft**
 
-
+The webpage will have 
 
 
 ## **The dream**
 
-
+Create an online hub with all the resources available for the analysis of fMRI. Per software, have a Jupyter notebook that allows the person to run their own analysis by themselves and to see their results at that same place. As some software require other software to be downloaded (SPM with MatLab), I will find a way to include them in a container where they could run the analysis without any trouble.
