@@ -2,13 +2,15 @@
 
 ## **Index**
 
-1. [Who am I?](#who-am-i) 
+1. [Who am I?](#who-am-i)
 
 2. [Goals](#goals)
 
 3. [Project draft](#project-draft)
-   
-4. More stuff..
+
+4. [The dream](#the-dream)
+
+5. More stuff...
 
 ## **Who am I?**
 
@@ -34,6 +36,7 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 ## **Project draft**
 
+Introduction.
 
 
 
