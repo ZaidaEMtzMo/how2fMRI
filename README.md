@@ -8,9 +8,11 @@
 
 3. [Project draft](#project-draft)
 
-4. [The dream](#the-dream)
+4. [To-do list](#to-do-list)
 
-5. More stuff...
+5. [The dream](#the-dream)
+
+6. More stuff...
 
 ## **Who am I?**
 
@@ -28,7 +30,7 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 - [x] Create the Github repository. :heavy_check_mark:
 - [x] Create the introductory `.md` file. :heavy_check_mark:
-- [ ] Create the draft of the project
+- [x] Create the draft of the project
 - [ ] Create the list of to-dos
 - [ ] Create the draft of the webpage.
 - [ ] Choose the example dataset.
@@ -36,11 +38,6 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 ## **Project draft**
 
-<<<<<<< HEAD
-Introduction.
-
-
-=======
 The webpage will have an **Introduction** section where I will share links of websites that include a brief but deep explanation of each technique, their uses in neuroscience and the normal steps that every analysis require.
 Then, I will have a tab per technique/software and then, per step of the analysis:
 
@@ -52,14 +49,14 @@ Then, I will have a tab per technique/software and then, per step of the analysi
   - Conversion to other formats
   - FSL
     - Preprocessing
-      1. Slice timing
-      2. Realignment
-      3. Coregistration
-      4. Normalisation
-      5. Smoothing
+          1. Slice timing
+          2. Realignment
+          3. Coregistration
+          4. Normalisation
+          5. Smoothing
     - Analysis
-      1. Task-based fMRI
-      2. Resting state fMRI
+          1. Task-based fMRI
+          2. Resting state fMRI
   - SPM
     - Preprocessing
   - AFNI
@@ -73,7 +70,11 @@ Then, I will have a tab per technique/software and then, per step of the analysi
 
 - EEG
   - Data acquisition
->>>>>>> 387e08973afdc3fb24b655c3bf92901482d8ccd9
+
+## **To-Do List**
+
+- [ ] ...
+- [ ] Preprocessing pipeline visualization in a Jupyter Notebook.
 
 ## **The dream**
 
