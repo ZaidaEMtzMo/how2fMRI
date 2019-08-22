@@ -30,7 +30,7 @@ Finally, I got the raw data: DICOM and MNC files. However, I didn't know how to 
 
 - [x] Create the Github repository. :heavy_check_mark:
 - [x] Create the introductory `.md` file. :heavy_check_mark:
-- [x] Create the draft of the project
+- [x] Create the draft of the project :heavy_check_mark:
 - [ ] Create the list of to-dos
 - [ ] Create the draft of the webpage.
 - [ ] Choose the example dataset.
@@ -48,15 +48,15 @@ Then, I will have a tab per technique/software and then, per step of the analysi
   - BIDS formatting
   - Conversion to other formats
   - FSL
-    - Preprocessing
-          1. Slice timing
-          2. Realignment
-          3. Coregistration
-          4. Normalisation
-          5. Smoothing
+    - [Jupyter Notebook for **PREPROCESSING**](./Preprocessing/preprocessing.ipynb)
+        1. Slice timing
+        2. Realignment
+        3. Coregistration
+        4. Normalisation
+        5. Smoothing
     - Analysis
-          1. Task-based fMRI
-          2. Resting state fMRI
+        1. Task-based fMRI
+        2. Resting state fMRI
   - SPM
     - Preprocessing
   - AFNI
