@@ -44,16 +44,17 @@ Then, I will have a tab per technique/software and then, per step of the analysi
 - Introduction
 
 - fMRI
-  - Data acquisition
+  - Data description and acquisition
   - BIDS formatting
-  - Conversion to other formats
   - FSL
     - [Jupyter Notebook for **PREPROCESSING**](./Preprocessing/preprocessing.ipynb)
-        1. Slice timing
-        2. Realignment
-        3. Coregistration
-        4. Normalisation
-        5. Smoothing
+        1. [Conversion to NIFTI](Preprocessing_pipeline.md)
+        2. [Onset files]
+        3. [Slice timing]
+        4. [Realignment]
+        5. [Coregistration]
+        6. [Normalisation]
+        7. [Smoothing]
     - Analysis
         1. Task-based fMRI
         2. Resting state fMRI
