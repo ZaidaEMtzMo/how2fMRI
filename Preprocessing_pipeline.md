@@ -65,7 +65,7 @@ For now, the files that matter to us are the structural scan (`20171214_120713MP
 
 *These files are only needed in a task-based fMRI.*
 
-Onset files are necessary to specify what stimulus was played at what time. Every software requires them to be in a specific way. In the case of **_FSL_**, you must have one file per stimulus. 
+Onset files are necessary to specify what stimulus was played at what time. Every software requires them to be in a specific way. In the case of **_FSL_**, you must have one file per stimulus.
 
 ## More info
 

@@ -48,13 +48,13 @@ Then, I will have a tab per technique/software and then, per step of the analysi
   - BIDS formatting
   - FSL
     - [Jupyter Notebook for **PREPROCESSING**](./Preprocessing/preprocessing.ipynb)
-        1. [Conversion to NIFTI](Preprocessing_pipeline.md)
-        2. [Onset files]
-        3. [Slice timing]
-        4. [Realignment]
-        5. [Coregistration]
-        6. [Normalisation]
-        7. [Smoothing]
+        1. [Conversion to NIFTI](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#conversion-to-nifti)
+        2. [Onset files](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#onset-files)
+        3. [Slice timing](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#)
+        4. [Realignment](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#)
+        5. [Coregistration](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#)
+        6. [Normalisation](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#)
+        7. [Smoothing](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Preprocessing_pipeline.md#)
     - Analysis
         1. Task-based fMRI
         2. Resting state fMRI
