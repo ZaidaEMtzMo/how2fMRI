@@ -67,7 +67,7 @@ For now, the files that matter to us are the structural scan (`20171214_120713MP
 
 The dataset provided for this analysis is not extense, but in neuroimaging is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called [BIDS](https://bids.neuroimaging.io/) and in this chapter, I will explain how to do it.
 
-![alt text](./Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
+![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
 
 ## Onset files
 
