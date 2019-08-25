@@ -72,7 +72,7 @@ First, you will need to convert your DICOM files to NIFTI files as these are the
 1. This video in YouTube from _math et al_ that explains in detail how to do the conversion:
 ![![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png "DICOM to BIDS conversion by **math et al** on YouTube 2018.")](https://www.youtube.com/watch?v=pAv9WuyyF3g)
 
-[![](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png)](https://www.youtube.com/watch?v=pAv9WuyyF3g)
+[!["DICOM to BIDS conversion by **math et al** on YouTube 2018."](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png)](https://www.youtube.com/watch?v=pAv9WuyyF3g)
 
 2. 
 
