@@ -1,0 +1,39 @@
+{
+	"descriptions":[
+		{
+		"dataType": "anat",
+		"modalityLabel": "adni",
+		"customLabels": "StructuralMRI",
+		"criteria": {
+			"SeriesDescription": "MPRAGE_ADNI_iPAT2",
+			"SidecarFilename": "*MPRAGE*"
+			}
+		},
+		{
+		"dataType": "func",
+		"modalityLabel": "bold",
+		"customLabels": "task-fMRI",
+		"criteria": {
+                        "SeriesDescription": "BOLD_MOSAIC_128_1.5mm",
+                        "SidecarFilename": "BOLD_MOSAIC_128_1.5mm_20*"
+			}
+                },
+                {
+                "dataType": "anat",
+                "modalityLabel": "adni",
+                "customLabels": "Distorsion_map",
+                "criteria": {
+                        "SeriesDescription": "DistortionMap_AP",
+                        "SidecarFilename": "*DistortionMap_AP*"
+                        }
+                },
+                {
+                "dataType": "localizer",
+                "modalityLabel": "MR",
+                "customLabels": "Localizer",
+                "criteria": {
+                        "SeriesDescription": "localizer",
+                        "SidecarFilename": "*localizer*"
+                        }
+                }]
+}

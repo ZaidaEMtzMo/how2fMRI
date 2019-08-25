@@ -63,18 +63,18 @@ For now, the files that matter to us are the structural scan (`20171214_120713MP
 
 ## BIDS formatting
 
-The dataset provided for this analysis is not extense, but in neuroimaging, it is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called *Brain Imaging Data Structure* ([BIDS](https://bids.neuroimaging.io/)) and in this chapter, I will give you the tools to do it, but you can also consult this [Nature paper](https://www.nature.com/articles/sdata201644).
+The dataset provided for this analysis is not extense, but in neuroimaging, it is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called *Brain Imaging Data Structure* ([BIDS](https://bids.neuroimaging.io/)) and in this chapter, I will give you the tools to do it, but you can also consult this [Nature paper](https://www.nature.com/articles/sdata201644). It is a best practice to convert all of our datasets to this format, ad it will help you, your lab and other people to understand your data in the future.
 
 ![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
 
-First, you will need to convert your DICOM files to NIFTI files as these are the standard format that BIDS use. Then, I will recommend that you check out the next resources:
+Before getting into the conversion, I will recommend that you check out the next resources:
 
-1. This video in YouTube from _math et al_ that explains in detail how to do the conversion:
-![![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png "DICOM to BIDS conversion by **math et al** on YouTube 2018.")](https://www.youtube.com/watch?v=pAv9WuyyF3g)
+1. This video in YouTube from _math et al_ that explains in detail how to do the conversion, but I will add more resources that will do most of it for you:
+[![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png "DICOM to BIDS conversion by math et al on YouTube 2018.")](https://www.youtube.com/watch?v=pAv9WuyyF3g)
 
-[![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png "DICOM to BIDS conversion by **math et al** on YouTube 2018.")](https://www.youtube.com/watch?v=pAv9WuyyF3g)
+2. Check out the BIDS starter kit [here](https://github.com/bids-standard/bids-starter-kit#welcome-to-the-bids-starter-kit). It will provide you with more resources and a whole community to do any troubleshooting you might need.
 
-2. 
+3. 
 
 ## Onset files
 
