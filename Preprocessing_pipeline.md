@@ -1,17 +1,19 @@
-# Pre-processing pipeline
+# Pre-processing pipeline <!-- omit in toc -->
+---
+---
 
-## Table of contents
+## Table of contents <!-- omit in toc -->
 
-- [Pre-processing pipeline](#pre-processing-pipeline)
-  - [Table of contents](#table-of-contents)
-  - [The data](#the-data)
-  - [Conversion to NIFTI](#conversion-to-nifti)
-  - [Onset files](#onset-files)
-  - [More info](#more-info)
-    - [1. Localizers](#1-localizers)
-    - [2. Structural MRI](#2-structural-mri)
-    - [3. Functional MRI](#3-functional-mri)
-    - [4. Distorsion fields](#4-distorsion-fields)
+- [---](#)
+- [The data](#the-data)
+- [Conversion to NIFTI](#conversion-to-nifti)
+- [BIDS formatting](#bids-formatting)
+- [Onset files](#onset-files)
+- [More info](#more-info)
+  - [1. Localizers](#1-localizers)
+  - [2. Structural MRI](#2-structural-mri)
+  - [3. Functional MRI](#3-functional-mri)
+  - [4. Distorsion fields](#4-distorsion-fields)
   
 ## The data
 
@@ -37,7 +39,7 @@ First, write in a terminal:
 
 `sudo apt-get install dcm2niix`
 
-Then, run the next command. Be sure to add the path where you want the data to be written. If you want more information about the command, be sure to check out the help command or go to their webpage [here](https://github.com/rordenlab/dcm2niix).
+Then, run the next command. Be sure to add the path where you want the data to be written. If you want more information about the command, just check out the help command or go to their webpage [here](https://github.com/rordenlab/dcm2niix).
 
 `dcm2nii -o $PATH_FOR_OUTPUT $PATH_DICOM_FILES`
 
@@ -60,6 +62,12 @@ o20171214_120713MPRAGEADNIiPAT2s002a1001.nii.gz
 ```
 
 For now, the files that matter to us are the structural scan (`20171214_120713MPRAGEADNIiPAT2s002a1001.nii.gz`), the functional files (`20171214_120713BOLDMOSAIC12815mms003a001.nii.gz` and `20171214_120713BOLDMOSAIC12815mms004a001.nii.gz`) and the distorsion maps(`20171214_120713DistortionMapAPs005a1001.nii.gz` and `20171214_120713DistortionMapPAs006a1001.nii.gz`.
+
+## BIDS formatting
+
+The dataset provided for this analysis is not extense, but in neuroimaging is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called [BIDS](https://bids.neuroimaging.io/) and in this chapter, I will explain how to do it.
+
+![alt text](./Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
 
 ## Onset files
 
