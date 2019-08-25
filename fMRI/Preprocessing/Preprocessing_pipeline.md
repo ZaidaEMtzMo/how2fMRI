@@ -1,10 +1,8 @@
+
 # Pre-processing pipeline <!-- omit in toc -->
----
----
 
 ## Table of contents <!-- omit in toc -->
 
-- [---](#)
 - [The data](#the-data)
 - [Conversion to NIFTI](#conversion-to-nifti)
 - [BIDS formatting](#bids-formatting)
@@ -65,9 +63,16 @@ For now, the files that matter to us are the structural scan (`20171214_120713MP
 
 ## BIDS formatting
 
-The dataset provided for this analysis is not extense, but in neuroimaging is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called [BIDS](https://bids.neuroimaging.io/) and in this chapter, I will explain how to do it.
+The dataset provided for this analysis is not extense, but in neuroimaging, it is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called *Brain Imaging Data Structure* ([BIDS](https://bids.neuroimaging.io/)) and in this chapter, I will give you the tools to do it, but you can also consult this [Nature paper](https://www.nature.com/articles/sdata201644).
 
 ![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
+
+First, you will need to convert your DICOM files to NIFTI files as these are the standard format that BIDS use. Then, I will recommend that you check out the next resources:
+
+1. This video in YouTube from _math et al_ that explains in detail how to do the conversion:
+![alt text](https://www.youtube.com/watch?v=pAv9WuyyF3g "DICOM to BIDS conversion by **math et al** on YouTube 2018.")
+
+2. 
 
 ## Onset files
 
