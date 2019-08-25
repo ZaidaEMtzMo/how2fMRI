@@ -70,7 +70,7 @@ The dataset provided for this analysis is not extense, but in neuroimaging, it i
 First, you will need to convert your DICOM files to NIFTI files as these are the standard format that BIDS use. Then, I will recommend that you check out the next resources:
 
 1. This video in YouTube from _math et al_ that explains in detail how to do the conversion:
-![alt text](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/Media/Figure2.png "DICOM to BIDS conversion by **math et al** on YouTube 2018.")(https://www.youtube.com/watch?v=pAv9WuyyF3g)
+![![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png "DICOM to BIDS conversion by **math et al** on YouTube 2018.")](https://www.youtube.com/watch?v=pAv9WuyyF3g)
 
 2. 
 
