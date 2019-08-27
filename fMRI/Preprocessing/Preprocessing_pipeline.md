@@ -7,11 +7,12 @@
 - [Conversion to NIFTI](#conversion-to-nifti)
 - [BIDS formatting](#bids-formatting)
 - [Onset files](#onset-files)
+- [Distortion / Field Maps](#distortion--field-maps)
 - [More info](#more-info)
   - [1. Localizers](#1-localizers)
   - [2. Structural MRI](#2-structural-mri)
   - [3. Functional MRI](#3-functional-mri)
-  - [4. Distorsion fields](#4-distorsion-fields)
+  - [4. Distortion fields](#4-distortion-fields)
   
 ## The data
 
@@ -41,7 +42,7 @@ Then, run the next command. Be sure to add the path where you want the data to b
 
 `dcm2nii -o $PATH_FOR_OUTPUT $PATH_DICOM_FILES`
 
-The type of files you can find after the conversion could be: [localizers](#1-localizers), [structural MRI](#2-structural-mri), [functional MRI](#3-functional-mri) or [distorsion fields](#4-distorsion-fields).
+The type of files you can find after the conversion could be: [localizers](#1-localizers), [structural MRI](#2-structural-mri), [functional MRI](#3-functional-mri) or [distortion fields](#4-distortion-fields).
 
 As an output, you will get something similar to:
 
@@ -59,28 +60,59 @@ co20171214_120713MPRAGEADNIiPAT2s002a1001.nii.gz
 o20171214_120713MPRAGEADNIiPAT2s002a1001.nii.gz
 ```
 
-For now, the files that matter to us are the structural scan (`20171214_120713MPRAGEADNIiPAT2s002a1001.nii.gz`), the functional files (`20171214_120713BOLDMOSAIC12815mms003a001.nii.gz` and `20171214_120713BOLDMOSAIC12815mms004a001.nii.gz`) and the distorsion maps(`20171214_120713DistortionMapAPs005a1001.nii.gz` and `20171214_120713DistortionMapPAs006a1001.nii.gz`.
+For now, the files that matter to us are the structural scan (`20171214_120713MPRAGEADNIiPAT2s002a1001.nii.gz`), the functional files (`20171214_120713BOLDMOSAIC12815mms003a001.nii.gz` and `20171214_120713BOLDMOSAIC12815mms004a001.nii.gz`) and the distortion maps(`20171214_120713DistortionMapAPs005a1001.nii.gz` and `20171214_120713DistortionMapPAs006a1001.nii.gz`.
 
 ## BIDS formatting
 
-The dataset provided for this analysis is not extense, but in neuroimaging, it is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called *Brain Imaging Data Structure* ([BIDS](https://bids.neuroimaging.io/)) and in this chapter, I will give you the tools to do it, but you can also consult this [Nature paper](https://www.nature.com/articles/sdata201644). It is a best practice to convert all of our datasets to this format, ad it will help you, your lab and other people to understand your data in the future.
+The dataset provided for this analysis is not extense, but in neuroimaging, it is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called *Brain Imaging Data Structure* ([BIDS](https://bids.neuroimaging.io/)) and in this chapter, I will give you the tools to do it, but you can also consult this [Nature paper](https://www.nature.com/articles/sdata201644).
 
 ![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
 
-Before getting into the conversion, I will recommend that you check out the next resources:
+First, you will need to convert your DICOM files to NIFTI files as these are the standard format that BIDS use. Then, I will recommend that you check out the next resources:
 
-1. This video in YouTube from _math et al_ that explains in detail how to do the conversion, but I will add more resources that will do most of it for you:
+1. This video in YouTube from _math et al_ that explains in detail how to do the conversion:
+
 [![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure2.png "DICOM to BIDS conversion by math et al on YouTube 2018.")](https://www.youtube.com/watch?v=pAv9WuyyF3g)
 
-2. Check out the BIDS starter kit [here](https://github.com/bids-standard/bids-starter-kit#welcome-to-the-bids-starter-kit). It will provide you with more resources and a whole community to do any troubleshooting you might need.
-
-3. 
+2. 
 
 ## Onset files
 
 *These files are only needed in a task-based fMRI.*
 
 Onset files are necessary to specify what stimulus was played at what time. Every software requires them to be in a specific way. In the case of **_FSL_**, you must have one file per stimulus.
+
+## Distortion / Field Maps
+
+Echo-planar imaging (EPI) images can be quite distorted due to B0 inhomogeneities, which in the brain are especially pronounced near the sinuses. While signal lost to these inhomogeneities cannot be recovered, signal that has been merely displaced can be returned to its proper location in the image if a map of the B0 field has been acquired. In this [document](https://lcni.uoregon.edu/kb-articles/kb-0003), you will find the specific instructions to do the acquisition and to use the field maps that you could need for your data. However, I will explain here the steps to do it on the provided dataset.
+
+Among the files, you will find two scans called Distortion Maps:
+
+``` bash
+20171214_120713DistortionMapAPs005a1001.nii.gz
+20171214_120713DistortionMapPAs006a1001.nii.gz
+```
+
+1. Use `fslmerge` to combine the two files into one 4D file where the forth dimension is time:
+
+``` bash
+fslmerge -t $NameOfOutput $InputAPDirection $InputPADirection
+```
+
+2. Create the *datain* file for this scan. For this, you will need the next values:
+
+   1. Phase encode direction:
+
+        In the **json** file of each of your Distortion Map, look for the field called  "**PaseEncodingDirection**":
+  
+``` json
+"PhaseEncodingDirection": "j",
+```
+
+        You will be able
+        
+   1. 2. Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last).
+      - To calculate this value:
 
 ## More info
 
@@ -96,7 +128,7 @@ Explanation
 
 Explanation
 
-### 4. Distorsion fields
+### 4. Distortion fields
 
 Explanation
 
