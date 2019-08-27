@@ -101,13 +101,14 @@ fslmerge -t $NameOfOutput $InputAPDirection $InputPADirection
 
 2. Create the *datain* file for this scan. For this, you will need the next values:
 
-   1. Phase encode direction ([here](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md#in-plane-spatial-encoding)):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Phase encode direction ([here](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md#in-plane-spatial-encoding)):
         In the **json** file of each of your Distortion Map, look for the field called "**PaseEncodingDirection**": `"PhaseEncodingDirection": "j",`. You will find different letters on it, they correspond to the three axis: **"i"**, **"j"**, **"k"**. In this case, the AP file (the first one we used in the merge) contains a `-j`, and the PA file contains a `j`. We will change the letter that is present for the number 1 and add its sign. Therefore, the first three columns of the file should look like this:
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure3.png "Example of three first columns of datain.txt")
 
 
-   2. Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last).
-      - To calculate this value:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last).
+        To calculate this value:
 
 ## More info
 

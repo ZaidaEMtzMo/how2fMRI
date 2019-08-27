@@ -1,0 +1,19 @@
+
+
+
+	Distorsion Map AP:
+	"PhaseEncodingDirection": "-j",
+
+		i -j k
+		0 -1 0
+
+	Distorsion Map PA:
+	"PhaseEncodingDirection": "j",
+
+		i j k
+		0 1 0
+
+	Datain.txt
+
+		0 -1 0
+		0 1 0
