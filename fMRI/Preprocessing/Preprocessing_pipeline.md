@@ -84,7 +84,7 @@ Onset files are necessary to specify what stimulus was played at what time. Ever
 
 ## Distortion / Field Maps
 
-Echo-planar imaging (EPI) images can be quite distorted due to B0 inhomogeneities, which in the brain are especially pronounced near the sinuses. While signal lost to these inhomogeneities cannot be recovered, signal that has been merely displaced can be returned to its proper location in the image if a map of the B0 field has been acquired. In this [document](https://lcni.uoregon.edu/kb-articles/kb-0003), you will find the specific instructions to do the acquisition and to use the field maps that you could need for your data. However, I will explain here the steps to do it on the provided dataset.
+Echo-planar imaging (EPI) images can be quite distorted due to B0 inhomogeneities, which in the brain are especially pronounced near the sinuses. While signal lost to these inhomogeneities cannot be recovered, signal that has been merely displaced can be returned to its proper location in the image if a map of the B0 field has been acquired. In this [document](https://lcni.uoregon.edu/kb-articles/kb-0003) or [here](https://github.com/ZaidaEMtzMo/how2fMRI/blob/master/fMRI/Preprocessing/FieldMaps/Acquiring%20and%20using%20field%20maps.pdf), you will find the specific instructions to do the acquisition and to use the field maps that you could need for your data. However, I will explain here the steps to do it on the provided dataset.
 
 Among the files, you will find two scans called Distortion Maps:
 
@@ -101,17 +101,12 @@ fslmerge -t $NameOfOutput $InputAPDirection $InputPADirection
 
 2. Create the *datain* file for this scan. For this, you will need the next values:
 
-   1. Phase encode direction:
+   1. Phase encode direction ([here](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md#in-plane-spatial-encoding)):
+        In the **json** file of each of your Distortion Map, look for the field called "**PaseEncodingDirection**": `"PhaseEncodingDirection": "j",`. You will find different letters on it, they correspond to the three axis: **"i"**, **"j"**, **"k"**. In this case, the AP file (the first one we used in the merge) contains a `-j`, and the PA file contains a `j`. We will change the letter that is present for the number 1 and add its sign. Therefore, the first three columns of the file should look like this:
 
-        In the **json** file of each of your Distortion Map, look for the field called  "**PaseEncodingDirection**":
-  
-``` json
-"PhaseEncodingDirection": "j",
-```
 
-        You will be able
-        
-   1. 2. Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last).
+
+   2. Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last).
       - To calculate this value:
 
 ## More info

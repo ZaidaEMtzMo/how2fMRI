@@ -4,21 +4,6 @@
 
 
 
-
-
-
-To be able to convert DICOM files to BIDS, it is essential to know the right words to use in each of their categories. Here you will find a glossary of the most used keywords in BIDS. They will be divided by the category so you will find:
-
-- [dataType](#datatype)
-- [modalityLabel](#modalitylabel)
-- [customLabels](#customlabels)
-- [criteria](#criteria)
-  - [SeriesDescription](#seriesdescription)
-  - [SidecarFilename](#sidecarfilename)
-- [Non-BIDS acquisitions](#non-bids-acquisitions)
-
-All of these keywords were obtained from the official BIDS website. If you want to add more info to each of your description, you may go to [**there**](https://bids-specification.readthedocs.io/en/stable/) and find their description.
-
 ## The DICOM to BIDS converter (see [here(https://github.com/cbedetti/Dcm2Bids)]) <!-- omit in toc -->
 
 An example of the configuration file for the converter [Dcm2Bids](https://github.com/cbedetti/Dcm2Bids) (converts your DICOMS into a BIDS data structure with NIFTIs inside through [dcm2niix](https://github.com/rordenlab/dcm2niix)):
