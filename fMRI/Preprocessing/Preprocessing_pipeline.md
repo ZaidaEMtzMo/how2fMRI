@@ -66,7 +66,7 @@ For now, the files that matter to us are the structural scan (`20171214_120713MP
 
 The dataset provided for this analysis is not extense, but in neuroimaging, it is common to have huge datasets. In recent years, it has been proposed to use a standard way to organize all of the neuroimaging data. This proposal is called *Brain Imaging Data Structure* ([BIDS](https://bids.neuroimaging.io/)) and in this chapter, I will give you the tools to do it, but you can also consult this [Nature paper](https://www.nature.com/articles/sdata201644).
 
-![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure1.png "BIDS formatting example. As found in <https://bids.neuroimaging.io/>")
+![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure1.png "BIDS formatting example. As found in bids.neuroimaging.io/")
 
 First, you will need to convert your DICOM files to NIFTI files as these are the standard format that BIDS use. Then, I will recommend that you check out the next resources:
 
@@ -102,13 +102,12 @@ fslmerge -t $NameOfOutput $InputAPDirection $InputPADirection
 2. Create the *datain* file for this scan. For this, you will need the next values:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Phase encode direction ([here](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md#in-plane-spatial-encoding)):
-        In the **json** file of each of your Distortion Map, look for the field called "**PaseEncodingDirection**": `"PhaseEncodingDirection": "j",`. You will find different letters on it, they correspond to the three axis: **"i"**, **"j"**, **"k"**. In this case, the AP file (the first one we used in the merge) contains a `-j`, and the PA file contains a `j`. We will change the letter that is present for the number 1 and add its sign. Therefore, the first three columns of the file should look like this:
+        In the **json** file of each of your Distortion Map, look for the field called "**PaseEncodingDirection**": `"PhaseEncodingDirection": "j",`. You will find different letters on it, they correspond to the three axis: **"i"**, **"j"**, **"k"**. In this case, the AP file (the first one we used in the merge) contains a `-j`, and the PA file contains a `j`. We will change the letter that is present for the number 1 and add its sign. Therefore, the first three columns of the file should look like last part of this:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text](https://raw.githubusercontent.com/ZaidaEMtzMo/how2fMRI/master/Media/Figure3.png "Example of three first columns of datain.txt")
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last).
-        To calculate this value:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Total readout time in seconds for the se-epi acquisition (time from the center of the first echo to the center of the last). To calculate this value:
+            
 
 ## More info
 
